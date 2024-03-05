@@ -44,7 +44,7 @@ public class Main {
             }
             for(int j = 0; j < n-1; j++){
                 if(arr[j][i] == arr[j+1][i]) count++;
-                else if(arr[i][j] != arr[i][j+1]) count = 0;
+                else if(arr[j][i] != arr[j+1][i]) count = 0;
                 if(count+1 == m){
                     result++;
                     break;
