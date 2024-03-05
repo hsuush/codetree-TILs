@@ -23,6 +23,10 @@ public class Main {
 
         for(int i = 0 ; i < n; i++){
             int count = 0;
+            if(m == 1) {
+                result = n * 2;
+                break;
+            }
             for(int j = 0; j < n-1; j++){
                 if(arr[i][j] == arr[i][j+1]) count++;
                 if(count+1 == m){
@@ -33,6 +37,9 @@ public class Main {
 
         for(int i = 0 ; i < n; i++){
             int count = 0;
+            if(m == 1){
+                break;
+            }
             for(int j = 0; j < n-1; j++){
                 if(arr[j][i] == arr[j+1][i]) count++;
                 if(count+1 == m){
