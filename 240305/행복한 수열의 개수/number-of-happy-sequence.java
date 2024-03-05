@@ -31,6 +31,7 @@ public class Main {
                 if(arr[i][j] == arr[i][j+1]) count++;
                 if(count+1 == m){
                     result++;
+                    break;
                 }
             }
         }
@@ -44,6 +45,7 @@ public class Main {
                 if(arr[j][i] == arr[j+1][i]) count++;
                 if(count+1 == m){
                     result++;
+                    break;
                 }
             }
         }
