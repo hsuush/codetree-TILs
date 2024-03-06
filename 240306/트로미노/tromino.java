@@ -40,6 +40,7 @@ public class Main {
         //행
         for(int i = 0; i < n; i++){
             for(int j = 0; j < m-2; j++){
+                if(m < 3) return;
                 int temp = 0;
                 temp += arr[i][j];
                 temp += arr[i][j+1];
@@ -52,6 +53,7 @@ public class Main {
         //열
         for(int j = 0; j < m; j++){
             for(int i = 0; i < n-2; i++){
+                if(n < 3) return;
                 int temp = 0;
                 temp += arr[i][j];
                 temp += arr[i+1][j];
@@ -65,7 +67,7 @@ public class Main {
     }
     public static int recMax(int i, int j){
         int sum = 0;
-        int min = 100;
+        int min = 1000;
         int res;
 
         int a = arr[i][j];
