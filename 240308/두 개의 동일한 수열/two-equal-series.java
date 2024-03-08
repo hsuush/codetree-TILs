@@ -32,7 +32,10 @@ public class Main {
                 System.out.print("No");
                 break;
             }
+            if(i == n-1){
+                System.out.print("Yes");
+            }
         }
-        System.out.print("Yes");
+        
     }
 }
