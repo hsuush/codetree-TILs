@@ -16,10 +16,17 @@ public class Main {
         k = Integer.parseInt(st.nextToken());
         n = Integer.parseInt(st.nextToken());
 
-        choose(1);
+        if(n == 1){
+            for(int i = 1; i < k+1; i++){
+                System.out.println(i);
+            }
+        } else {
+            choose(1);
+        }
     }
 
     public static void choose(int curNum){
+
         if(curNum == n+1){
             System.out.println(result.get(0) + " " + result.get(1));
             return;
