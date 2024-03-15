@@ -23,7 +23,7 @@ public class Main { ;
                     dirNum = (dirNum + 1) % 4;
                     break;
                 case 'L':
-                    dirNum = (dirNum - 1) % 4;
+                    dirNum = (dirNum - 1 + 4) % 4;
                     break;
                 case 'F':
                     x += dx[dirNum];
@@ -32,7 +32,7 @@ public class Main { ;
             }
         }
 
-        System.out.println(x + " " + y);
+        System.out.println(x + "  " + y);
 
 
     }
