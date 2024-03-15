@@ -2,8 +2,7 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-    public static ArrayList<Integer> result= new ArrayList<>();
-    public static int count = 0;
+    public static StringBuilder sb = new StringBuilder();
 
     public static int k;
     public static int n;
@@ -22,18 +21,16 @@ public class Main {
     public static void choose(int curNum){
 
         if(curNum == n+1){
-            for (Integer integer : result) {
-                System.out.print(integer + " ");
-
-            }
-            System.out.println();
+            System.out.println(sb);
             return;
         }
 
         for(int i = 1; i < k+1; i++){
-            result.add(i);
+            sb.append(i);
+            sb.append(" ");
             choose(curNum + 1);
-            result.remove(result.size() - 1);
+            sb.deleteCharAt(sb.length() - 1);
+            sb.deleteCharAt(sb.length() - 1);
         }
     }
 }
