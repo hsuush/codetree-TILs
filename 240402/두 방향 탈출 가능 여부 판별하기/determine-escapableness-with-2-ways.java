@@ -36,7 +36,11 @@ public class Main {
 
         visited[0][0] = 1;
         DFS(0,0);
-        System.out.println(result);
+        if(visited[N-1][M-1] == 1){
+            System.out.println(1);
+        } else{
+            System.out.println(0);
+        }
     }
 
     public static void DFS(int x, int y){
@@ -46,13 +50,6 @@ public class Main {
         for(int i = 0; i < 2; i++){
             newX = x + dx[i];
             newY = y + dy[i];
-            if(newX == N-1 && newY == M-1){
-                result++;
-                return;
-            }
-            if(i == 1 && result == 1){
-                return;
-            }
             if(CanGo(newX, newY)){
                 visited[newX][newY] = 1;
                 DFS(newX, newY);
