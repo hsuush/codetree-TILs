@@ -43,7 +43,7 @@ public class Main {
 
         sb.append(town);
         sb.append('\n');
-        number.sort(Comparator.naturalOrder());
+        Collections.sort(number);
         for (Integer integer : number) {
             sb.append(integer);
             sb.append('\n');
