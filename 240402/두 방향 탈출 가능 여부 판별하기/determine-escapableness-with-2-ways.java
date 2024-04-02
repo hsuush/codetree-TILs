@@ -50,6 +50,9 @@ public class Main {
                 result++;
                 return;
             }
+            if(i == 1 && result == 1){
+                return;
+            }
             if(CanGo(newX, newY)){
                 visited[newX][newY] = 1;
                 DFS(newX, newY);
