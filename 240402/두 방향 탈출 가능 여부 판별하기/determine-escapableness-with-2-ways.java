@@ -59,7 +59,7 @@ public class Main {
 
     // 뱀이 있는지, 격자를 벗어나진 않는지, 이미 지나온 곳인지 확인 필요
     public static boolean CanGo(int newX, int newY){
-        if(newX < 0 || newX == M || newY < 0 || newY == N){
+        if(newX < 0 || newX == N || newY < 0 || newY == M){
             return false;
         }else if(grid[newX][newY] == 0 || visited[newX][newY] == 1)
             return false;
