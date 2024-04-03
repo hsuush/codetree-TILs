@@ -39,6 +39,7 @@ public class Main {
                 for(int k = 0; k < m ; k++){
                     if(visited[j][k]==0 && water[j][k] == 0){
                         visited[j][k] = 1;
+                        // 여기서 전부 1인 상황을 잡아야함...
                         area++;
                         DFS(j,k);
                     }
@@ -51,7 +52,9 @@ public class Main {
                 }
             }
         }
-
+        
+        if(max == 1) System.out.println(1 + " " + 0);
+        
         int kMax = 0;
         int iMax = 0;
         for(int i = 1; i <= max; i++){
