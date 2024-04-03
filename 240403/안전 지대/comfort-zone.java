@@ -56,8 +56,8 @@ public class Main {
         int iMax = 0;
         for(int i = 1; i <= max; i++){
             if(K.get(i) > kMax){
-                kMax = K.get(i);
-                iMax = i;
+                kMax = i;
+                iMax = K.get(i);
             }
         }
 
