@@ -52,19 +52,20 @@ public class Main {
                 }
             }
         }
-        
-        if(max == 1) System.out.println(1 + " " + 0);
-        
-        int kMax = 0;
-        int iMax = 0;
-        for(int i = 1; i <= max; i++){
-            if(K.get(i) > kMax){
-                kMax = i;
-                iMax = K.get(i);
-            }
-        }
 
-        System.out.println(kMax + " " + iMax);
+        if(max == 1) System.out.println(1 + " " + 0);
+        else {
+            int kMax = 0;
+            int iMax = 0;
+            for (int i = 1; i <= max; i++) {
+                if (K.get(i) > kMax) {
+                    kMax = i;
+                    iMax = K.get(i);
+                }
+            }
+
+            System.out.println(kMax + " " + iMax);
+        }
 
     }
     public static void water(int temp){
